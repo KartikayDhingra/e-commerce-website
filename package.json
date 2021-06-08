@@ -1,0 +1,49 @@
+{
+  "name": "e-commerce-website",
+  "version": "1.0.0",
+  "description": "e-commerce store",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass public/sass/main.scss public/css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "author": "Kartikay",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "concat": "^1.0.3",
+    "node-sass": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.10"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^3.4.1",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "fs": "^0.0.1-security",
+    "jquery": "^3.6.0",
+    "jscroll": "^2.4.1",
+    "mongoose": "^5.12.7",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.1.0",
+    "stripe": "^8.150.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KartikayDhingra/e-commerce-shoe-store.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KartikayDhingra/e-commerce-shoe-store/issues"
+  },
+  "homepage": "https://github.com/KartikayDhingra/e-commerce-shoe-store#readme"
+}

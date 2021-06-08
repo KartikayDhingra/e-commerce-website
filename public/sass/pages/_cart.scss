@@ -1,0 +1,205 @@
+.cart{
+    margin: 10rem 0;
+    padding: 10rem 15rem;
+
+    @include respond(phone){
+        padding: 5rem 7rem;
+    }
+
+    &__heading{
+        font-size: 4rem;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 4rem;
+
+        @include respond(phone){
+            font-size: 5rem;
+        }
+    }
+
+    &__container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &__items{
+        background-color: #FAF9F8;
+        padding: 4rem;
+        flex: 0 0 55%;
+        align-self: self-start;
+
+        h2{
+            font-size: 2.6rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 1.5rem;
+
+            @include respond(phone){
+                font-size: 3.6rem;
+                margin-bottom: 3rem;
+            }
+
+        }
+
+        h3{
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-bottom: 2.5rem;
+
+            @include respond(phone){
+                font-size: 3rem;
+                margin-bottom: 4rem;
+            }
+
+        }
+
+        a:link,
+        a:visited{
+            // text-decoration: none;
+            font-size: 1.4rem;
+            color: inherit;
+            text-transform: uppercase;
+
+            @include respond(phone){
+                font-size: 2rem;
+            }
+        }
+
+        &-fill{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &:not(:last-child){
+                margin-bottom: 2rem;
+            }
+
+        }
+
+        &-photo{
+            
+
+            img{
+                height: 10rem;
+            }
+        }
+
+        &-info{
+            flex: 0 0 30%;
+        }
+
+        &-name{
+            display: inline-block;
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        &-price{
+            font-size: 1.6rem;
+            font-weight: 300;
+        }
+
+        &-delete{
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        &-line-break{
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__notEmpty{
+        background-color: transparent;
+    }
+
+    &__checkout{
+        background-color: #FAF9F8;
+        padding: 4rem;
+        flex: 0 0 35%;
+        align-self: flex-start;
+    }
+
+    &__total-container{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1.5rem 0;
+        border-top: 1px solid $color-primary;
+        margin-bottom: 2rem;
+    }
+
+    &__total{
+        margin-right: auto;
+        font-weight: 400;
+        font-size: 2rem;
+
+        @include respond(phone){
+            font-size: 3rem;
+        }
+
+        &-price{
+            font-size: 2rem;
+        }
+    }
+
+    &__checkout-coupon{
+        font-size: 1.6rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+
+        @include respond(phone){
+            font-size: 2.4rem;
+        }
+    }
+
+    &__discount{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4rem;
+
+        input{
+           flex: 0 0 65%;
+           padding: 1rem;
+           font-size: 1.6rem;
+           border: 1px solid $color-grey-light-3;
+
+           @include respond(phone){
+            font-size: 2.4rem;
+            flex: 0 0 55%;
+           }
+
+           &:focus{
+               outline: none;
+           }
+        }
+
+        button{
+            flex: 0 0 25%;
+            font-size: 1.6rem;
+            background-color: #fff;
+            border: 1px solid $color-primary;
+        }
+
+    }
+
+    &__add{
+        width: 100%;
+        font-size: 1.4rem;
+        padding: 1.5rem 2rem;
+        letter-spacing: .5px;
+        background-color: $color-primary;
+        color: #fff;
+        border: none;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        @include respond(phone){
+            font-size: 2rem;
+        }
+    }
+
+
+}

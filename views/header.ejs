@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>E-commerce store</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Staatliches&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://js.stripe.com/v3/"></script>
+
+</head>
+<body>
+    
+    <div class="menu">
+        <input type="checkbox" class="menu__checkbox" name="menu" id="menu-toggle">
+        <label for="menu-toggle" class="menu__button">
+            <svg class="menu__icon" id="Layer_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g><path d="m174 240h-108c-36.393 0-66-29.607-66-66v-108c0-36.393 29.607-66 66-66h108c36.393 0 66 29.607 66 66v108c0 36.393-29.607 66-66 66zm-108-208c-18.748 0-34 15.252-34 34v108c0 18.748 15.252 34 34 34h108c18.748 0 34-15.252 34-34v-108c0-18.748-15.252-34-34-34z"/><path d="m446 240h-108c-36.393 0-66-29.607-66-66v-108c0-36.393 29.607-66 66-66h108c36.393 0 66 29.607 66 66v108c0 36.393-29.607 66-66 66zm-108-208c-18.748 0-34 15.252-34 34v108c0 18.748 15.252 34 34 34h108c18.748 0 34-15.252 34-34v-108c0-18.748-15.252-34-34-34z"/><path d="m392 512c-66.168 0-120-53.832-120-120s53.832-120 120-120 120 53.832 120 120-53.832 120-120 120zm0-208c-48.523 0-88 39.477-88 88s39.477 88 88 88 88-39.477 88-88-39.477-88-88-88z"/><path d="m174 512h-108c-36.393 0-66-29.607-66-66v-108c0-36.393 29.607-66 66-66h108c36.393 0 66 29.607 66 66v108c0 36.393-29.607 66-66 66zm-108-208c-18.748 0-34 15.252-34 34v108c0 18.748 15.252 34 34 34h108c18.748 0 34-15.252 34-34v-108c0-18.748-15.252-34-34-34z"/></g></svg>
+        </label>
+
+        <div class="menu__background"></div>
+
+        <nav class="menu__nav">
+            <ul class="menu__list">
+                <li class="menu__item"><a href="#" class="menu__link">Men</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Women</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Kids</a></li>
+            </ul>
+        </nav>
+        
+    </div>
+
+    <div class="nav-menu">
+        <input type="checkbox" class="nav-menu__checkbox" name="menu" id="nav-menu-toggle">
+        <label for="nav-menu-toggle" class="nav-menu__button"></label>
+
+        <div class="nav-menu__background"></div>
+
+        <nav class="nav-menu__nav">
+            <ul class="nav-menu__list">
+                <li class="nav-menu__item"><a href="/shop" class="nav-menu__link">Shop</a></li>
+                <li class="nav-menu__item"><a href="#signup-popup" class="nav-menu__link">Sign in</a></li>
+                <li class="nav-menu__item"><a href="/cart" class="nav-menu__link">View your cart</a></li>
+            </ul>
+        </nav>
+        
+    </div>
+
+    <nav class="navigation navbar-fixed-top nav-other">
+            
+        <div class="logo">Power</div>
+               
+        <ul class="navigation__list">
+            <li class="navigation__item"><a href="/shop" class="navigation__link">Shop</a></li>
+            <li class="navigation__item">
+                <a href="#signup-popup" class="navigation__link">
+                    <% if(userInfo === undefined){ %>
+                        <div class="navigation__user-signup"></div>
+                    <% } else{ %>
+                        Hello, <%= userInfo.username %>
+                    <% } %>
+                </a>
+            </li>
+            <li class="navigation__item">
+                <a href="/cart" class="navigation__link">
+                    <div class="navigation__shop-icon"></div>
+                    <span class="navigation__cart-items"><%= count %></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="cover-background" id="signup-popup">
+        <div class="signup">
+            <div class="close">
+                <a href="#"><img src="img/close.png" alt="close"></a>
+            </div>
+            <div class="signup__heading">
+                Sign Up / Login
+            </div>
+
+            <form action="/signup" method="post">
+                <input type="text" placeholder="Your Name" name="name" class="signup__input" required>
+                <input type="email" placeholder="Email address" name="email" class="signup__input" required>
+                <input type="password" placeholder="Password" name="password" class="signup__input" required>
+                <div class="signup__submit">
+                    <button type="submit" class="signup__btn">Sign Up</button>
+                    <span>OR</span>
+                    <a href="#login-popup" class="login__btn">Login</a>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <div class="cover-background" id="login-popup">
+        <div class="signup">
+            <div class="close">
+                <a href="#"><img src="img/close.png" alt="close"></a>
+            </div>
+            <div class="signup__heading">
+                Login
+            </div>
+
+            <form action="/login" method="post">
+                <input type="email" placeholder="Email address" name="email" class="signup__input" required>
+                <input type="password" placeholder="Password" name="password" class="signup__input" required>
+                <div class="login__submit">
+                    <button type="submit" class="login__btn">Login</button>
+                </div>
+            </form>
+
+        </div>
+    </div>

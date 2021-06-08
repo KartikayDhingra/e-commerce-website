@@ -1,0 +1,52 @@
+<%- include("header"); -%>
+
+<main>
+    <div class="cart">
+        <div class="cart__heading">Shopping bag</div>
+        <div class="cart__container">
+            <div class="cart__items cart__notEmpty">
+
+                <% for(let i=0; i<userInfo.cart.length; i++){ %>
+                    <div class="cart__items-fill">
+                        <div class="cart__items-photo">
+                            <img src="<%= userInfo.cart[i].product_img %>" alt="Air max 95">
+                        </div>
+                        <div class="cart__items-info">
+                            <div class="cart__items-name"><%= userInfo.cart[i].product_name %></div>
+                            <div class="cart__items-price">Rs.<%= userInfo.cart[i].price %></div>
+                        </div>
+
+                        <form action="/deleteItem" method="post">
+                            <input type="hidden" name="deleteItemFromCart" value=<%= userInfo.cart[i].product_id %> >
+                            <button type="submit" class="cart__items-delete" id=<%= userInfo.cart[i].product_id %> >
+                                <img src="img/delete.png" alt="delete">
+                            </button>
+                        </form>
+
+                    </div>
+                    <hr class="cart__items-line-break">
+                <% } %>
+                
+            </div>
+            <div class="cart__checkout">
+                <div class="cart__checkout-coupon">Add a discount code</div>
+                <form action="/discount" method="POST" class="cart__discount">
+                    <input type="text">
+                    <button type="submit">ADD</button>
+                </form>
+
+                <div class="cart__total-container">
+                    <div class="cart__total">Total</div>
+                    <div class="cart__total-price">
+                        Rs.<%= total %>
+                    </div>
+                </div>
+
+                <button type="button" class="cart__add" id="checkout-button">Continue to checkout</button>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+<%- include("footer"); -%>

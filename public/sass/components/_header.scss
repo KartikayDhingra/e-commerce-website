@@ -1,0 +1,196 @@
+.logo{
+   text-transform: uppercase;
+   font-size: 5rem;
+   font-family: 'Staatliches', cursive;
+   text-shadow: .5rem .5rem $color-black;
+   position: relative;            
+   left: 50%;
+   transform: translateX(-50%);
+
+}
+
+.logo-slide{
+    color: $color-primary;
+    text-shadow: .5rem .5rem #fff;
+}
+
+.navigation{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8rem;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    padding: 1.5rem 4rem;
+    color: $color-grey-light-1;
+    // box-shadow: 0 1rem 4rem rgba($color-primary-dark,0.5);
+    // border-bottom: 1px solid $color-grey-light-3;
+    z-index: 5;
+
+    &__fig{ 
+
+    }
+
+
+    &__photo{
+
+    }
+
+    &__user-signup{
+        height: 3rem;
+        width: 3rem;
+        -webkit-mask: url(../../img/user.svg) no-repeat;
+        -webkit-mask-size: 100%;
+        -webkit-mask-position: center;
+        mask: url(../../img/user.svg) no-repeat;
+        mask-position: 100%;
+        mask-size: 100%;
+        background-color: #fff;
+    }
+
+    &__user-signup-slide{
+        background-color: $color-primary;
+    }
+
+    &__list{
+        list-style: none;
+        flex: 0 0 25%;
+        align-self: stretch;
+
+        display: flex; 
+        padding: 2rem;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 3rem;
+        font-size: 1.8rem;
+
+        @include respond(tab-port){
+            flex: 0;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+    }
+
+    &__item{
+
+    }
+
+    &__link:link,
+    &__link:visited{
+        text-decoration: none;
+        color: inherit;
+        font-weight: 300;
+
+    }
+
+    &__shop-icon{
+        height: 3rem;
+        width: 3rem;
+        -webkit-mask: url(../../img/shopping-cart.svg) no-repeat;
+        -webkit-mask-size: 100%;
+        -webkit-mask-position: center;
+        mask: url(../../img/shopping-cart.svg) no-repeat;
+        mask-position: 100%;
+        mask-size: 100%;
+        background-color: #fff;
+
+        
+    }
+
+    &__shop-icon-slide{
+        background-color: $color-primary;
+    }
+
+    &__item:last-child{
+        position: relative;
+    }
+
+    &__cart-items{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 2rem;
+        width: 2rem;
+        background-color: $color-grey-light-2;
+        color: $color-primary;
+        font-size: 1.2rem;
+        border-radius: 50px;
+        position: absolute;
+        top: -.5rem;
+        right: -1rem;
+    }
+
+}
+
+.nav-other{
+    background-color: $color-grey-dark-2 !important;
+}
+
+.header-heading{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    backface-visibility: hidden;
+
+    .heading-main{
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 10px;
+        line-height: 1.5;
+        color: $color-grey-light-1;
+        font-weight: 300;
+        animation: moveDown 1s ease-in-out;
+
+        span{
+            display: inline-block;
+            font-size: 10rem;
+            // animation: pulsate 1s infinite;
+            
+        }
+    }
+
+}
+
+.btn-shop{
+    padding: 1.5rem 3rem;
+    margin-top: 6rem;
+    border-radius: 50px;
+    background-color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: 0 2rem 4rem rgba(0,0,0,0.3);
+    backface-visibility: hidden;
+    transition: all .4s;
+    animation: moveUp 1s;
+    margin-bottom: 2rem;
+    border: 3px solid transparent;
+
+    @include respond(phone){
+        font-size: 2.6rem;
+        padding: 2rem 4rem;
+    }
+
+    &:hover{
+        transform: scale(1.1);
+        padding: 1.5rem 5rem;
+        
+    }
+
+    span{
+        margin-left: .8rem;
+    }
+
+}

@@ -1,0 +1,86 @@
+
+<%- include("header"); -%>
+
+<main>
+
+    <div class="category">
+        <div class="category__dropdown">
+            <button class="category__dropdown-btn">Category
+                <svg>
+                    <use xlink:href="img/sprite.svg#icon-chevron-down"></use>
+                </svg>
+            </button>
+            <div class="category__options">
+                <a href="#" class="category__options-link">Men</a>
+                <a href="#" class="category__options-link">Women</a>
+                <a href="#" class="category__options-link">Kids</a>
+            </div>
+        </div>
+        <div class="category__dropdown">
+            <button class="category__dropdown-btn">Filter by
+                <svg>
+                    <use xlink:href="img/sprite.svg#icon-chevron-down"></use>
+                </svg>
+            </button>
+            <div class="category__options">
+                <a href="#" class="category__options-link">Price</a>
+                <a href="#" class="category__options-link">Recent</a>
+                <a href="#" class="category__options-link">Trending</a>
+            </div>
+        </div>
+        <div class="category__dropdown">
+            <button class="category__dropdown-btn">Color
+                <svg>
+                    <use xlink:href="img/sprite.svg#icon-chevron-down"></use>
+                </svg>
+            </button>
+            <div class="category__options">
+                <a href="#" class="category__options-link">Black</a>
+                <a href="#" class="category__options-link">Blue</a>
+                <a href="#" class="category__options-link">White</a>
+                <a href="#" class="category__options-link">Grey</a>
+                <a href="#" class="category__options-link">Red</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="shop">
+        
+        <% for(let i = 0; i<products.length; i++){ %>
+            <div class="shop__card" >
+                <div class="shop__card-img">
+                    <img class="shop__card-photo" src="<%= products[i].product_img %>" alt="nike">
+                </div>
+                <div class="shop__card-name">
+                    <%= products[i].product_name %>
+                </div>
+                <div class="shop__card-info">
+                    <div class="shop__card-price">
+                        Rs.<%= products[i].price %>
+                    </div>
+
+                    <% if(userInfo !== undefined){ %>
+                            <form action="/shop" method="post">
+                                <input type="hidden" name="addToCart" value=<%= "product-" + (i+1) %> >
+                                <button type="submit" class="shop__btn" id=<%= "product-" + (i+1) %> >
+                                    Add to Cart
+                                </button>    
+                            </form>
+                    <%} else{ %>
+                            <form action="#signup-popup">
+                                <input type="hidden" name="addToCart" value=<%= "product-" + (i+1) %> >
+                                <button type="submit" class="shop__btn" id=<%= "product-" + (i+1) %> >
+                                    Add to Cart
+                                </button>    
+                            </form>
+                    <% } %> 
+
+                </div>
+            </div>
+        <% } %>
+
+        </div>
+</main>
+
+
+<%- include("footer"); -%>

@@ -1,0 +1,18 @@
+<%- include("header"); -%>
+
+<div class="signup">
+    <div class="signup__box">
+        <h3 class="signup__heading">Login</h3>
+        <form action="/login" method="POST" class="signup__form">
+            <input type="email" placeholder="Enter your email" name="email" class="signup__input">
+            <input type="password" placeholder="Enter password" name="password" class="signup__input">
+            <div class="signup__btn-box login__btn-box">
+                <button type="submit" class="login__btn">Login</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<%- include("footer"); -%>

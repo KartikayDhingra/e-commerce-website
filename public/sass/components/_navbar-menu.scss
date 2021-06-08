@@ -1,0 +1,138 @@
+.nav-menu{
+
+    position: relative;
+
+    &__checkbox{
+        display: none;
+    }
+
+    &__button{
+        height: 5rem;
+        width: 0rem;
+        border-radius: 50%;
+        position: fixed;
+        right: 8rem;
+        top: 1.5rem;
+        z-index: 30;
+        // color: black;
+        font-size: 1.6rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        -webkit-mask: url(../../img/menu-2.svg) no-repeat;
+        -webkit-mask-size: 100%;
+        -webkit-mask-position: center;
+        mask: url(../../img/menu-2.svg) no-repeat;
+        mask-position: 100%;
+        mask-size: 100%;
+        opacity: 0;
+        visibility: hidden;
+
+        @include respond(tab-port){
+            width: 5rem;
+            visibility: visible;
+            opacity: 1;
+            background-color: #fff;
+        }
+    }
+
+    &__background{
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 1rem;
+        right: 4rem;
+        transition: all .4s;
+        z-index: 10;
+        background-image: radial-gradient($color-grey-light-1,$color-grey-light-2);
+        opacity: 0;
+    }
+
+    &__checkbox:checked ~ &__background{
+        opacity: 1;
+        background-image: radial-gradient($color-grey-light-1,$color-grey-light-2);
+        transform: scale(80);
+    }
+
+    &__nav{
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 20;
+        opacity: 0;
+        width: 0;
+        transform: translateX(50%);
+        transition: all .4s;
+    }
+
+    &__checkbox:checked ~ &__nav{
+        opacity: 1;
+        width: 100%;
+        transform: translateX(0);
+    }
+
+    &__list{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        list-style: none;
+        text-align: center;
+        padding: .5rem 2rem;
+        text-transform: uppercase;
+        display: none;
+        
+    }
+
+    &__checkbox:checked ~ &__nav &__list{
+        visibility: visible;
+        display: block;
+    }
+
+    &__item{
+        padding: 2rem;
+        border-bottom: 3px solid $color-grey-light-3;
+
+        &:not(:last-child){
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__link{
+        &:link,
+        &:visited{
+            display: inline-block;
+            text-decoration: none;
+            font-size: 4rem;
+            font-weight: 300;
+            color: $color-primary;
+            padding: 1rem 3rem;
+            background-image: linear-gradient(120deg , transparent 50%, rgba($color-primary,1) 50%);
+            background-size: 230%;
+            transition: all .4s;
+            font-family: 'Staatliches', cursive;
+            letter-spacing: 4px;
+        }
+        
+        &:hover,
+        &:active{
+            background-position: 100%;
+            color: $color-grey-light-1;
+            transform: translateX(1rem);
+        }
+
+    }
+
+    &__button-slide{
+        background-color: $color-primary;
+    }
+
+    &__checkbox:checked ~ &__button{
+        background-color: $color-primary;
+    }
+
+}

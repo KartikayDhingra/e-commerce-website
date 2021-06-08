@@ -1,0 +1,58 @@
+
+[
+    {
+        "product_id": "1", 
+        "product_name": "Nike Air Max 90 SE", 
+        "price": "11495", 
+        "product_img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/917f03dd-0b4d-4efa-9826-41771e0070c5/air-max-90-se-shoe-0GdsBK.png"
+    },
+    {
+        "product_id": "2", 
+        "product_name": "Nike Air Max 95 SE", 
+        "price": "15495", 
+        "product_img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/5177feea-81ef-463f-a50f-c0566ccd3a4a/air-max-95-se-shoe-36d44Z.png"
+    },
+    {
+        "product_id": "3", 
+        "product_name": "Nike Air Zoom Pegasus", 
+        "price": "6495", 
+        "product_img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/c7b110c9-1b72-4c61-8cee-de117e0613b4/air-zoom-pegasus-38-flyease-running-shoe-KFTHh4.png"
+    },
+    {
+        "product_id": "4", 
+        "product_name": "Nike Air Force 1", 
+        "price": "11490", 
+        "product_img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/516a3c2c-becc-4390-bb4a-07e3a45dd911/air-force-1-07-shoe-pXGkJq.png"
+    },
+    {
+        "product_id": "5", 
+        "product_name": "Nike Waffle One", 
+        "price": "12500", 
+        "product_img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/33e64982-7e38-4bc6-93ec-6a296b1864c8/waffle-one-shoe-1SFQwJ.png"
+    },
+    {
+        "product_id": "6", 
+        "product_name": "Nike Blazer Mid '77", 
+        "price": "8890", 
+        "product_img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/84ee67a1-816f-4650-92d9-05a3fc7b316b/blazer-mid-77-shoe-2PCxLw.png"
+    },
+    {
+        "product_id": "7", 
+        "product_name": "Nike Air Zoom G.T.Cut", 
+        "price": "15690", 
+        "product_img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/beee3d45-6213-44a2-95c8-5d445badaad4/air-zoom-gtcut-basketball-shoe-sfrvRJ.png"
+    },
+    {
+        "product_id": "8", 
+        "product_name": "Nike AIr Force 1 '07Craft", 
+        "price": "10890", 
+        "product_img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/22d268a1-5a62-4f6b-985d-602024b393be/air-force-1-07-craft-shoe-jCGMCm.png"
+    },
+    {
+        "product_id": "9", 
+        "product_name": "Nike Air Max Infinity 2", 
+        "price": "8890", 
+        "product_img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e2e0a774-333f-4532-a8a2-b917ce5b0e95/air-max-infinity-2-shoe-HKhL4f.png"
+    }
+]    
+    

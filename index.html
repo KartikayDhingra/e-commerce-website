@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>E-commerce store</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Staatliches&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+    <div class="menu">
+        <input type="checkbox" class="menu__checkbox" name="menu" id="menu-toggle">
+        <label for="menu-toggle" class="menu__button">
+            <svg class="menu__icon" id="Layer_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g><path d="m174 240h-108c-36.393 0-66-29.607-66-66v-108c0-36.393 29.607-66 66-66h108c36.393 0 66 29.607 66 66v108c0 36.393-29.607 66-66 66zm-108-208c-18.748 0-34 15.252-34 34v108c0 18.748 15.252 34 34 34h108c18.748 0 34-15.252 34-34v-108c0-18.748-15.252-34-34-34z"/><path d="m446 240h-108c-36.393 0-66-29.607-66-66v-108c0-36.393 29.607-66 66-66h108c36.393 0 66 29.607 66 66v108c0 36.393-29.607 66-66 66zm-108-208c-18.748 0-34 15.252-34 34v108c0 18.748 15.252 34 34 34h108c18.748 0 34-15.252 34-34v-108c0-18.748-15.252-34-34-34z"/><path d="m392 512c-66.168 0-120-53.832-120-120s53.832-120 120-120 120 53.832 120 120-53.832 120-120 120zm0-208c-48.523 0-88 39.477-88 88s39.477 88 88 88 88-39.477 88-88-39.477-88-88-88z"/><path d="m174 512h-108c-36.393 0-66-29.607-66-66v-108c0-36.393 29.607-66 66-66h108c36.393 0 66 29.607 66 66v108c0 36.393-29.607 66-66 66zm-108-208c-18.748 0-34 15.252-34 34v108c0 18.748 15.252 34 34 34h108c18.748 0 34-15.252 34-34v-108c0-18.748-15.252-34-34-34z"/></g></svg>
+        </label>
+
+        <div class="menu__background"></div>
+
+        <nav class="menu__nav">
+            <ul class="menu__list">
+                <li class="menu__item"><a href="#" class="menu__link">Men</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Women</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Kids</a></li>
+            </ul>
+        </nav>
+        
+    </div>
+    
+    <header class="header">
+        
+        <video class="header__video" autoplay loop>
+            <source src="img/shoes.mp4" type="video/mp4">
+        </video>
+
+        <nav class="navigation navbar-fixed-top">
+            
+            <div class="logo">Power</div>
+                   
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="/shop" class="navigation__link">Shop</a></li>
+                <li class="navigation__item">
+                    <a href="/signup" class="navigation__link">
+                        <div class="navigation__user-signup"></div>
+                    </a>
+                </li>
+                <li class="navigation__item">
+                    <a href="/" class="navigation__link">
+                        <div class="navigation__shop-icon"></div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header-heading">
+            <div class="heading-main">Bring
+                <br> 
+                <span>POWER</span> 
+                <br>
+                to your steps
+                <br>
+            </div>
+            <a href="#" class="btn-shop">Shop now <span>&rarr;</span>
+                </svg>
+            </a>
+        </div>
+
+    </header>
+
+    <div class="sidebar">
+        <div class="social">
+            <a href="#" class="social__link"><img src="img/instagram.png" alt="instagram logo" class="social__photo"></a>
+            <a href="#" class="social__link"><img src="img/facebook-circular-logo.png" alt="facebook logo" class="social__photo"></a>
+            <a href="#" class="social__link"><img src="img/linkedin.png" alt="linkedin logo" class="social__photo"></a>
+        </div>
+    </div>
+
+    <main>
+        <section class="section-brands">
+            <div class="u-center-text u-margin-bottom-large">
+                <h2 class="heading-primary">
+                    Shop Our Latest Shoes
+                </h2>
+            </div>
+
+            <div class="brands">
+                <div class="brands__box">
+                    <a href="#">
+                        <div class="brands__img">
+                            <img src="img/air-max-90.jpg" alt="Air Max-90">
+                        </div>
+                        <div class="brands__product-info">
+                            <div class="brands__product-name">
+                                Nike Air Max 90 SE
+                            </div>
+                            <div class="brands__product-price">
+                                Rs.11495
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="brands__box">
+                    <a href="#">
+                        <div class="brands__img">
+                            <img src="img/air-max-95.jpg" alt="Air Max-95">
+                        </div>
+                        <div class="brands__product-info">
+                            <div class="brands__product-name">
+                                Nike Air Max 95 SE
+                            </div>
+                            <div class="brands__product-price">
+                                Rs.15495
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="brands__box">
+                    <a href="#">
+                        <div class="brands__img">
+                            <img src="img/air-jordan-1.jpg" alt="Air Jordan-1">
+                        </div>
+                        <div class="brands__product-info">
+                            <div class="brands__product-name">
+                                Nike Air Jordan-1 Mid
+                            </div>
+                            <div class="brands__product-price">
+                                Rs.9995
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="more">
+                <button class="btn-inline">See more <span>&rarr;</span></button>
+            </div>
+
+
+        </section>
+
+        <section class="features">
+            <div class="features__container">
+                <div class="features__box">
+                    <img src="img/delivery-time.svg" alt="delivery-time" class="features__icon">
+                </div>
+                <div class="features__box">
+                    <div class="features__info">
+                        <h3 class="features__heading">
+                            Fast Delivery
+                        </h3>
+                        <p class="features__content">
+                            We will deliver your product in 1-3 days including free shipping all around the world.
+                        </p>
+                    </div>
+                </div>
+                <div class="features__box">
+                    <div class="features__info">
+                        <h3 class="features__heading">
+                            Safe Transaction
+                        </h3>
+                        <p class="features__content">
+                            We will deliver your product in 1-3 days including free shipping all around the world.
+                        </p>
+                    </div>
+                </div>
+                <div class="features__box">
+                    <img src="img/monitor.svg" alt="safe-transaction" class="features__icon">
+                </div>
+                <div class="features__box">
+                    <img src="img/search.svg" alt="quality assurance" class="features__icon">
+                </div>
+                <div class="features__box">
+                    <div class="features__info">
+                        <h3 class="features__heading">
+                            Quality Assurance
+                        </h3>
+                        <p class="features__content">
+                            We will deliver your product in 1-3 days including free shipping all around the world.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="reviews">
+            <div class="u-center-text u-margin-bottom-medium">
+                <h2 class="heading-primary">
+                    Customer reviews
+                </h2>
+            </div>
+            <div class="reviews__user">
+                <div class="reviews__user-box">
+                    <div class="reviews__user-rating">&nbsp;</div>
+                    <div class="reviews__user-name">John</div>
+                    <p class="reviews__user-review">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    </p>
+                </div>
+                <div class="reviews__user-box">
+                    <div class="reviews__user-rating">&nbsp;</div>
+                    <div class="reviews__user-name">Smith</div>
+                    <p class="reviews__user-review">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+                    </p>
+                </div>
+                <div class="reviews__user-box">
+                    <div class="reviews__user-rating">&nbsp;</div>
+                    <div class="reviews__user-name">Angela</div>
+                    <p class="reviews__user-review">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                </div>
+                <!-- <div class="reviews__user-box">
+                    <div class="reviews__user-rating">&nbsp;</div>
+                    <div class="reviews__user-name">John</div>
+                    <p class="reviews__user-review">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <div class="reviews__user-box">
+                    <div class="reviews__user-rating">&nbsp;</div>
+                    <div class="reviews__user-name">John</div>
+                    <p class="reviews__user-review">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <div class="reviews__user-box">
+                    <div class="reviews__user-rating">&nbsp;</div>
+                    <div class="reviews__user-name">John</div>
+                    <p class="reviews__user-review">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <div class="reviews__user-box">
+                    <div class="reviews__user-rating">&nbsp;</div>
+                    <div class="reviews__user-name">John</div>
+                    <p class="reviews__user-review">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <div class="reviews__user-box">
+                    <div class="reviews__user-rating">&nbsp;</div>
+                    <div class="reviews__user-name">John</div>
+                    <p class="reviews__user-review">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div> -->
+            </div>
+
+        </section>
+
+
+        <section class="section-newsletter">
+            <div class="newsletter">
+                <div class="newsletter__heading">
+                    Get the latest updates on offers
+                    <span>Signup to our <u>Newsletter</u></span>
+                </div>
+                <form action="/">
+                    <input type="text" class="newsletter__input" placeholder="Enter your email" autocomplete="off">
+                    <button type="submit" class="newsletter__button">
+                        <span>&rarr;</span>
+                    </button>
+                </form>
+                <div class="newsletter__icon"></div>
+            </div>
+            
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__payment-heading">Payment partners</div>
+        <div class="footer__payment-options">
+            <img src="img/credit-card.png" alt="credit-card" class="footer__payment-photo">
+            <img src="img/master-card.png" alt="mastercard" class="footer__payment-photo">
+            <img src="img/paypal.png" alt="paypal" class="footer__payment-photo">
+            <img src="img/paytm.png" alt="paytm" class="footer__payment-photo">
+            <img src="img/google-pay.png" alt="google pay" class="footer__payment-photo">
+        </div>
+
+        <div class="footer__info">
+            <ul class="footer__info-list">
+                <li class="footer__info-item"><a href="#" class="footer__info-link">Contact</a></li>
+                <li class="footer__info-item"><a href="#" class="footer__info-link">About</a></li>
+                <li class="footer__info-item"><a href="#" class="footer__info-link">Product</a></li>
+                <li class="footer__info-item"><a href="#" class="footer__info-link">Blog</a></li>
+                <li class="footer__info-item"><a href="#" class="footer__info-link">Terms</a></li>
+            </ul>
+
+            <div class="footer__info-copyright">
+                Made by Kartikay Dhingra.
+                &#169; 2021. Made in India
+            </div>
+        </div>
+    </footer>
+    
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="client.js" charset="utf-8"></script>
+
+</body>
+</html>

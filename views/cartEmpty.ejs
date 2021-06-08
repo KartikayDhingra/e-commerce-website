@@ -1,0 +1,31 @@
+
+<%- include("header"); -%>
+
+<main>
+    <div class="cart">
+        <div class="cart__heading">Shopping bag</div>
+        <div class="cart__container">
+            <div class="cart__items">
+                <h2>Your Shopping Bag is Empty!</h2>
+                <h3>Sign in to save or access already saved items in your shopping bag.</h3>
+                <a href="/signup">Sign in</a>
+            </div>
+            <div class="cart__checkout">
+                <div class="cart__checkout-coupon">Add a discount code</div>
+                <form action="/discount" method="POST" class="cart__discount">
+                    <input type="text">
+                    <button type="submit">ADD</button>
+                </form>
+
+                <div class="cart__total-container">
+                    <div class="cart__total">Total</div>
+                    <div class="cart__total-price">Rs.0</div>
+                </div>
+                <button class="cart__add">Continue to checkout</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<%- include("footer"); -%>

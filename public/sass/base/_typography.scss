@@ -1,0 +1,10 @@
+.heading-primary{
+    display: inline-block;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    background-image: linear-gradient(to right, rgba($color-primary-light,0.8), rgba($color-primary-dark,0.8));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}

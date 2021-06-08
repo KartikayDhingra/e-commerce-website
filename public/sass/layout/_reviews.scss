@@ -1,0 +1,76 @@
+.reviews__user{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10rem;
+
+    @include respond(tab-port){
+        justify-content: center;
+        row-gap: 10rem;
+    }
+
+    &-box{
+        background-color: #fff;
+        padding: 2rem 3rem;
+        flex: 0 0 25%;
+        border-radius: 5px;
+        box-shadow: 0 1rem 4rem rgba($color-black,0.3);
+
+        @include respond(tab-port){
+            flex: 0 0 70%;
+        }
+
+    }
+
+    &-rating{
+        // background-image: url(../../img/rating.svg);
+        // background-size: 60%;
+        // background-position: center;
+        // background-repeat: no-repeat;
+        background-color: #AFA48C;
+        -webkit-mask:  url(../../img/rating.svg) no-repeat;
+        mask:  url(../../img/rating.svg) no-repeat;
+        -webkit-mask-size: 60%;
+        mask-size: 60%;
+        -webkit-mask-position: center;
+        mask-position: center;
+        width: 50%;
+        height: 2rem;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+
+        @include respond(tab-port){
+            margin-bottom: 4rem;
+            height: 3rem;
+        }
+    }
+
+    &-name{
+        font-size: 2rem;
+        font-weight: 400;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: 2rem;
+        color: $color-grey-dark-2;
+
+        @include respond(tab-port){
+            font-size: 3rem;
+            margin-bottom: 4rem;
+        }
+    }
+
+    &-review{
+        font-size: 1.3rem;
+        letter-spacing: 2.5px;
+        font-weight: 300;
+        line-height: 1.5;
+        color: $color-grey-dark-1;
+        word-wrap: break-word;
+
+        @include respond(tab-port){
+            font-size: 2rem;
+            line-height: 2;
+        }
+    }
+}
