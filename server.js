@@ -231,7 +231,7 @@ app.post('/create-checkout-session', async (req, res) => {
 
 
 
-app.listen(Process.env.PORT || 3000, (req,res) => {
+app.listen(process.env.PORT || 3000, (req,res) => {
     console.log("Server started at port 3000");
     
 })
