@@ -21,7 +21,7 @@ const uri = "mongodb+srv://Kartikd23:" + mongoDbAtlasPassword + "@cluster0.ujcg9
 
 mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true})
 .then( () => {
-    console.log("Conected to the database");
+    console.log("Connected to the database");
 })
 .catch( (err) => {
     console.log(err);
