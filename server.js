@@ -20,12 +20,12 @@ const mongoDbAtlasPassword = process.env.MONGO_PASS;
 const uri = "mongodb+srv://Kartikd23:" + mongoDbAtlasPassword + "@cluster0.ujcg9.mongodb.net/userDB?retryWrites=true&w=majority";
 
 mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true})
-    .then( () => {
-        console.log("Conected to the database");
-    })
-    .catch( (err) => {
-        console.log(err);
-    })
+.then( () => {
+    console.log("Conected to the database");
+})
+.catch( (err) => {
+    console.log(err);
+});
  
 
 const userSchema = new mongoose.Schema({
