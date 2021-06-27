@@ -20,7 +20,7 @@ const mongoDbUsername = process.env.MONGO_USERNAME;
 
 const uri = "mongodb+srv://" + mongoDbUsername + ":" + mongoDbAtlasPassword + "@cluster0.ujcg9.mongodb.net/userDB?retryWrites=true&w=majority";
 
-mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false})
 .then( () => {
     console.log("Connected to the database");
 })
@@ -59,7 +59,6 @@ app.get("/shop", (req,res) => {
 
 app.post("/shop", (req,res) => {
 
-
     let product_info = req.body.addToCart;
 
     products.forEach((product) => {
@@ -72,13 +71,6 @@ app.post("/shop", (req,res) => {
                 else{
                     userLoggedIn = updatedItem;
                     count = userLoggedIn.cart.length;
-                    products.forEach( (product) => {
-                        userLoggedIn.cart.forEach( (item) => {
-                            if(item.product_id === product.product_id){
-                                totalPrice += parseInt(product.price);
-                            }
-                        })
-                    })
                     res.redirect("/shop");
                 }
             });
@@ -94,26 +86,18 @@ app.get("/cart",(req,res) => {
 
     if(userLoggedIn === undefined){
         totalPrice = 0;
-        res.render("cartEmpty",{count: count,total: totalPrice,userInfo: userLoggedIn});
+        res.render("cartEmpty",{count: count,userInfo: userLoggedIn});
     }
     else if(userLoggedIn !== undefined){
         count = userLoggedIn.cart.length;
 
-            userLoggedIn.cart.forEach( (item) => {
-                products.forEach( (product) => {
-                    if(item.product_name === product.product_name && price !==totalPrice){
-                        totalPrice += parseInt(item.price);
-                    }
-                });    
-            });
-            price = totalPrice;
         
 
         if(count === 0){
-            res.render("cartEmpty",{count: count,total: totalPrice,userInfo: userLoggedIn})
+            res.render("cartEmpty",{count: count,userInfo: userLoggedIn})
         }
         else{
-            res.render("cart",{count: count,total: totalPrice,userInfo: userLoggedIn});
+            res.render("cart",{count: count,userInfo: userLoggedIn});
         }
     }
 })
@@ -138,10 +122,10 @@ app.post("/deleteItem", (req,res) => {
                     count = userLoggedIn.cart.length;
                     
                     if(count === 0){
-                        res.render("cartEmpty",{count: count,total: totalPrice,userInfo: userLoggedIn});
+                        res.render("cartEmpty",{count: count,userInfo: userLoggedIn});
                     }
                     else{
-                        res.render("cart",{count: count,total: totalPrice,userInfo: userLoggedIn});
+                        res.render("cart",{count: count,userInfo: userLoggedIn});
                     }
                 }
             });

@@ -62,4 +62,20 @@ let count = 0;
         });
     });
 
+let total = 0;    
+let totalPrice = document.querySelector(".cart__total-price");
+
+let itemsPrice = document.querySelectorAll(".cart__items-price");
+
+itemsPrice.forEach(itemPrice => {
+  total += parseInt(itemPrice.innerHTML);
+})
+
+totalPrice.innerHTML = "Rs." + total;
+
+
+
+
+
+
  

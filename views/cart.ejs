@@ -13,7 +13,7 @@
                         </div>
                         <div class="cart__items-info">
                             <div class="cart__items-name"><%= userInfo.cart[i].product_name %></div>
-                            <div class="cart__items-price">Rs.<%= userInfo.cart[i].price %></div>
+                            <div class="cart__items-price"><%= userInfo.cart[i].price %></div>
                         </div>
 
                         <form action="/deleteItem" method="post">
@@ -38,7 +38,7 @@
                 <div class="cart__total-container">
                     <div class="cart__total">Total</div>
                     <div class="cart__total-price">
-                        Rs.<%= total %>
+                        
                     </div>
                 </div>
 
