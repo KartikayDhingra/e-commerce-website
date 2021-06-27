@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config({path: __dirname + "/.env"});
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -16,8 +16,9 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
 const mongoDbAtlasPassword = process.env.MONGO_PASS;
+const mongoDbUsername = process.env.MONGO_USERNAME;
 
-const uri = "mongodb+srv://Kartikd23:" + mongoDbAtlasPassword + "@cluster0.ujcg9.mongodb.net/userDB?retryWrites=true&w=majority";
+const uri = "mongodb+srv://" + mongoDbUsername + ":" + mongoDbAtlasPassword + "@cluster0.ujcg9.mongodb.net/userDB?retryWrites=true&w=majority";
 
 mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true})
 .then( () => {
