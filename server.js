@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
 
-const YOUR_DOMAIN = 'http://localhost:3000';
+const YOUR_DOMAIN = 'http://localhost:3000' || "https://salty-island-33223.herokuapp.com";
 
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
